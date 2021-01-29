@@ -14,7 +14,9 @@ html {
 body {
     background-color: $principal-color;
 }
-
+p > span {
+    color: $orange;
+}
 //header
 .header {
     width: 100%;
@@ -37,6 +39,7 @@ body {
     }
 }
 
+//hero
 .hero {
     width: 100%;
     height: auto;
@@ -66,8 +69,54 @@ body {
     &__title {
         font-size: $title-fontsize;
         margin-bottom: $items-margin;
+        color: $orange;
     }
     &__description {
         @include featured-section;
     }
+}
+
+//podcast
+.podcast {
+    text-align: center;
+    color: white;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: $padding;
+    margin-top: $sections-margin;
+
+    &__img--container {
+        @include image-container(80px);
+        margin-top: $items-margin;
+    }
+    &__img {
+        @include img-cover;
+    }
+    &__description {
+        @include featured-section;
+        margin-top: $items-margin;
+        font-size: $base-fontsize;
+    }
+    &__description--title {
+        font-size: $subtitle-fontsize;
+        margin-bottom: $items-margin;
+        color: $orange;
+    }
+    &__title {
+        font-size: $title-fontsize;
+        color: $orange;
+    }
+}
+
+//footer
+.footer {
+    background-color: $secundary-color;
+    max-height: 20px;
+    width: 100%;
+    font-size: $base-fontsize;
+    color: white;
+    text-align: center;
+    margin-top: $sections-margin;
 }

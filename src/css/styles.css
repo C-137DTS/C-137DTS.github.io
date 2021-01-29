@@ -12,6 +12,10 @@ body {
   background-color: #241734;
 }
 
+p > span {
+  color: #FD1053;
+}
+
 .header {
   width: 100%;
   height: 100px;
@@ -62,13 +66,62 @@ body {
 .aboutme__title {
   font-size: 3rem;
   margin-bottom: 20px;
+  color: #FD1053;
 }
 .aboutme__description {
   background-color: #2E2157;
-  border-radius: 15px;
+  border-radius: 5px;
   font-size: 1.6rem;
   height: auto;
   padding: 10px;
+}
+
+.podcast {
+  text-align: center;
+  color: white;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 85px;
+}
+.podcast__img--container {
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+}
+.podcast__img {
+  height: 100%;
+  object-fit: cover;
+}
+.podcast__description {
+  background-color: #2E2157;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  height: auto;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+.podcast__description--title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #FD1053;
+}
+.podcast__title {
+  font-size: 3rem;
+  color: #FD1053;
+}
+
+.footer {
+  background-color: #2E2157;
+  max-height: 20px;
+  width: 100%;
+  font-size: 1.6rem;
+  color: white;
+  text-align: center;
+  margin-top: 85px;
 }
 
 /*# sourceMappingURL=styles.css.map */
