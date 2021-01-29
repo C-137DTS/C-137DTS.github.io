@@ -1,0 +1,73 @@
+@import "libs/variables.scss";
+@import "libs/tipografia.scss";
+@import "libs/mixins.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: $principal-color;
+}
+
+//header
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: $padding;
+    border-bottom: 2px solid $orange;
+    
+    &__logo--container {
+        @include image-container(100%, 70%);
+    }
+    &__logo {
+        width: 100px;
+        @include img-cover;
+    }
+    &__nav {
+        width: 30%;
+        height: 100%;
+    }
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: $padding;
+    text-align: center;
+
+    &__slogan {
+        font-size: $title-fontsize;
+        color: white;
+        margin-top: 20px;
+    }
+    &__slogan--principalword {
+        color: $orange;
+    }
+}
+
+.aboutme {
+    width: 100%;
+    height: auto;
+    padding: $padding;
+    color: white;
+    text-align: center;
+    margin-top: $sections-margin;
+
+    &__title {
+        font-size: $title-fontsize;
+        margin-bottom: $items-margin;
+    }
+    &__description {
+        @include featured-section;
+    }
+}
