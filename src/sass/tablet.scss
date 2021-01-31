@@ -1,0 +1,9 @@
+@import "libs/variables.scss";
+@import "libs/tipografia.scss";
+@import "libs/mixins.scss";
+
+.aboutme, .podcast {
+    width: 80%;
+    margin: $sections-margin auto 0 auto;
+}
+
