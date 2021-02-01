@@ -58,6 +58,55 @@ p > span {
     }
 }
 
+//Hamburger menu
+
+%burger-btn {
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all .5 ease-in-out;
+}
+
+.menu__btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+    cursor: pointer;
+    transition: all .5 ease-in-out;
+    border: 3px solid white;
+
+    &--burger {
+        @extend %burger-btn;
+    }
+    &--burger::after {
+        transform: translateY(-16px);
+        content: '';
+        @extend %burger-btn;
+        position: absolute;
+    }
+    &--burger::before {
+        transform: translateY(16px);
+        content: '';
+        @extend %burger-btn;
+        position: absolute;
+    }
+    &.open &--burger {
+        transform: translateX(-50px);
+        background-color: transparent;
+    }
+    &.open &--burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    &.open &--burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+}
+
+//About me
 .aboutme {
     width: 100%;
     height: auto;

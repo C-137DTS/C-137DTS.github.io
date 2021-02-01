@@ -55,6 +55,46 @@ p > span {
   color: #FD1053;
 }
 
+.menu__btn--burger::before, .menu__btn--burger::after, .menu__btn--burger {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.5 ease-in-out;
+}
+
+.menu__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  cursor: pointer;
+  transition: all 0.5 ease-in-out;
+  border: 3px solid white;
+}
+.menu__btn--burger::after {
+  transform: translateY(-16px);
+  content: "";
+  position: absolute;
+}
+.menu__btn--burger::before {
+  transform: translateY(16px);
+  content: "";
+  position: absolute;
+}
+.menu__btn.open .menu__btn--burger {
+  transform: translateX(-50px);
+  background-color: transparent;
+}
+.menu__btn.open .menu__btn--burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu__btn.open .menu__btn--burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
 .aboutme {
   width: 100%;
   height: auto;
