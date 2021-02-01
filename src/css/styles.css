@@ -33,9 +33,23 @@ p > span {
   height: 100%;
   object-fit: cover;
 }
-.header__nav {
-  width: 30%;
-  height: 100%;
+
+.nav {
+  height: 100vh;
+  width: 100%;
+  background-color: #FD1053;
+  opacity: 0.9;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: none;
+}
+.nav__item {
+  list-style: none;
+  font-size: 3rem;
+  margin-top: 20px;
+  font-weight: 600;
 }
 
 .hero {
@@ -60,7 +74,7 @@ p > span {
   height: 4px;
   background-color: white;
   border-radius: 2px;
-  transition: all 0.5 ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu__btn {
@@ -72,7 +86,6 @@ p > span {
   width: 60px;
   cursor: pointer;
   transition: all 0.5 ease-in-out;
-  border: 3px solid white;
 }
 .menu__btn--burger::after {
   transform: translateY(-16px);
@@ -93,6 +106,12 @@ p > span {
 }
 .menu__btn.open .menu__btn--burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.header__nav {
+  width: 100%;
+  position: relative;
+  right: -100%;
 }
 
 .aboutme {
